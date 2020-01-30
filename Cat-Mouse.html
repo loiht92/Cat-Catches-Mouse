@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Rat = function (name, amount, speed) {
+        this.name = name;
+        this.amount = amount;
+        this.speed = speed;
+
+        this.getName = function () {
+            return this.name;
+        };
+        this.getAmount = function () {
+            return this.amount;
+        };
+        this.setAmount = function () {
+            return this.amount--
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+    };
+
+    let Cat = function (name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+
+        this.getName = function () {
+            return this.name;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.setSpeed = function () {
+            this.speed++
+        };
+        this.catchMouse = function () {
+            if (cat.speed() > mouse.speed()) {
+                return this.eatMouse();
+            }
+
+        };
+        this.eatMouse = function () {
+            if (mouse.getAmount() > 0) {
+                this.weight++;
+                mouse.setAmount();
+            }else {
+                return alert ("het chuot roi");
+            }
+        }
+    };
+
+    let mouse = new Rat("jerry" , 10, 10);
+    let cat = new Cat("Tom" , 20, 9);
+</script>
+</body>
+</html>
